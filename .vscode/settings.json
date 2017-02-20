@@ -1,0 +1,63 @@
+{
+    "css.validate": false,
+
+    "debug.inlineValues": true,
+
+    "editor.fontSize": 14,
+    "editor.formatOnType": true,
+    "editor.mouseWheelZoom": true,
+    "editor.quickSuggestionsDelay": 0,
+    "editor.formatOnSave": true,
+
+    "extension-manager.extensions": [
+        "abusaidm.html-snippets",
+        "aeschli.vscode-css-formatter",
+        "AESSoft.aessoft-class-autocomplete",
+        "annsk.alignment",
+        "benjaminromano.typings-installer",
+        "capaj.vscode-standardjs-snippets",
+        "chenxsan.vscode-standard-format",
+        "chenxsan.vscode-standardjs",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "donjayamanne.jquerysnippets",
+        "eg2.vscode-npm-script",
+        "fknop.vscode-npm",
+        "GregorBiswanger.package-watcher",
+        "hollowtree.vue-snippets",
+        "HookyQR.beautify",
+        "jvitor83.typings-autoinstaller",
+        "lihui.vs-color-picker",
+        "liuji-jim.vue",
+        "naumovs.node-modules-resolve",
+        "octref.vetur",
+        "pmneo.tsimporter",
+        "pranaygp.vscode-css-peek",
+        "robertohuertasm.vscode-icons",
+        "seanwash.vue",
+        "searKing.preview-vscode",
+        "sensourceinc.require-complete",
+        "sidthesloth.html5-boilerplate",
+        "SirTori.indenticator",
+        "spywhere.guides",
+        "typings.vscode-typings",
+        "webstp.extension-manager",
+        "xabikos.JavaScriptSnippets"
+    ],
+
+    "files.autoSave": "onFocusChange",
+
+    "git.confirmSync": false,
+
+    "html.suggest.angular1": false,
+    "html.suggest.ionic": false,
+
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.check.tscVersion": true,
+
+    "vsicons.presets.angular": false,
+
+    "window.zoomLevel": 1,
+    "workbench.editor.tabCloseButton": "off",
+    "files.associations": {}
+}
