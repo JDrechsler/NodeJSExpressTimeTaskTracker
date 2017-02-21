@@ -12,7 +12,15 @@ var vueVars = {
 
 var vueMethods = {
     addNewTask() {
+<<<<<<< HEAD
+        if (vueVars.newTask == '') {
+            return
+        }
+        vueVars.dataSet.push([vueVars.newTask, 0, 0, 0])
+        vueVars.newTask = ''
+=======
 
+>>>>>>> origin/master
     }
 }
 
