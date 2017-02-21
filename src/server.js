@@ -32,9 +32,9 @@ io.on('connection', function (socket) {
     })
 
     setInterval(function () {
-        console.log(winprocess.getActiveWindowName())
+        /*console.log(winprocess.getActiveWindowName())*/
         socket.emit('response-foregroundApp', winprocess.getActiveWindowName())
-    }, 2000);
+    }, 1000);
 
     //A client disconnects from the server
     socket.on('disconnect', function () {
