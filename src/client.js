@@ -12,15 +12,12 @@ var vueVars = {
 
 var vueMethods = {
     addNewTask() {
-<<<<<<< HEAD
+
         if (vueVars.newTask == '') {
             return
         }
         vueVars.dataSet.push([vueVars.newTask, 0, 0, 0])
         vueVars.newTask = ''
-=======
-
->>>>>>> origin/master
     }
 }
 
@@ -57,6 +54,21 @@ document.addEventListener("DOMContentLoaded", () => {
             { title: "Time spent in seconds" },
             { title: "Time spent in minutes" },
             { title: "Time spent in hours" }
+        ],
+        dom: 'lfrtBp',
+        buttons: [
+            {
+                extend: 'csvHtml5',
+                title: getTableName()
+            },
+            {
+                extend: 'excelHtml5',
+                title: getTableName()
+            },
+            {
+                extend: 'pdfHtml5',
+                title: getTableName()
+            }
         ]
     })
 })
@@ -99,4 +111,10 @@ function refreshTable() {
     table.clear()
     table.rows.add(vueVars.dataSet)
     table.draw()
+}
+
+function getTableName() {
+    var rightNow = new Date()
+    var res = rightNow.toISOString().slice(0, 10).replace(/TZ/g, "")
+    return res
 }

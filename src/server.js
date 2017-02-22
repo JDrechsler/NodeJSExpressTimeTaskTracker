@@ -32,10 +32,6 @@ io.on('connection', function (socket) {
     })
 
     setInterval(function () {
-<<<<<<< HEAD
-=======
-        /*console.log(winprocess.getActiveWindowName())*/
->>>>>>> origin/master
         socket.emit('response-foregroundApp', winprocess.getActiveWindowName())
     }, 1000);
 
