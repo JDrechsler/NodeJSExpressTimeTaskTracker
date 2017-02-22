@@ -1,8 +1,8 @@
 var socket = io()
 
 var vueVars = {
-    table: '#example',
-    status: 'works',
+    table: '#table',
+    status: 'working',
     newTask: '',
     foregroundApp: '',
     dataSet: [
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
         ev.preventDefault();
     }
 
-    $(vueVars.table).DataTable({
+    var table = $(vueVars.table).DataTable({
         data: vueVars.dataSet,
         columns: [
             { title: "Active window", "width": "50%" },
@@ -55,11 +55,12 @@ document.addEventListener("DOMContentLoaded", () => {
             { title: "Time spent in minutes" },
             { title: "Time spent in hours" }
         ],
-        dom: 'lfrtBp',
+        dom: 'Blfrtip',
         buttons: [
             {
                 extend: 'csvHtml5',
-                title: getTableName()
+                title: getTableName(),
+                class: 'primary'
             },
             {
                 extend: 'excelHtml5',
@@ -71,11 +72,14 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         ]
     })
+
+    $('.export').append(table.buttons().container())
+    $('a.buttons-html5').attr('class', 'btn btn-primary')
 })
 
 socket.emit('halloVonClient')
 socket.on('halloVonServer', function (message) {
-    vueVars.status = 'works and connected to server'
+    vueVars.status = 'connected to server'
     console.log(message)
 })
 
