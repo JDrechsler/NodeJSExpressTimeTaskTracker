@@ -1,14 +1,11 @@
 {
     "css.validate": false,
-
     "debug.inlineValues": true,
-
     "editor.fontSize": 14,
     "editor.formatOnType": true,
     "editor.mouseWheelZoom": true,
     "editor.quickSuggestionsDelay": 0,
     "editor.formatOnSave": true,
-
     "extension-manager.extensions": [
         "abusaidm.html-snippets",
         "aeschli.vscode-css-formatter",
@@ -44,19 +41,15 @@
         "webstp.extension-manager",
         "xabikos.JavaScriptSnippets"
     ],
-
+    "html.format.wrapLineLength": 0,
+    "editor.wordWrap": false,
     "files.autoSave": "onFocusChange",
-
     "git.confirmSync": false,
-
     "html.suggest.angular1": false,
     "html.suggest.ionic": false,
-
     "typescript.referencesCodeLens.enabled": true,
     "typescript.check.tscVersion": true,
-
     "vsicons.presets.angular": false,
-
     "window.zoomLevel": 1,
     "workbench.editor.tabCloseButton": "off",
     "files.associations": {}
