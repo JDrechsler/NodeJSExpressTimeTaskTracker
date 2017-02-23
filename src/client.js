@@ -55,27 +55,42 @@ document.addEventListener("DOMContentLoaded", () => {
             { title: "Time spent in minutes" },
             { title: "Time spent in hours" }
         ],
+        footer: [
+            { title: "Active window", "width": "50%" },
+            { title: "Time spent in seconds" },
+            { title: "Time spent in minutes" },
+            { title: "Time spent in hours" }
+        ],
         dom: 'Blfrtip',
+        drawCallback: function () {
+            var api = this.api();
+            $('.sec').html(api.column(1, { search: 'applied' }).data().sum())
+            $('.min').html((api.column(2, { search: 'applied' }).data().sum()).toFixed(2))
+            $('.hour').html((api.column(3, { search: 'applied' }).data().sum()).toFixed(2))
+        },
         buttons: [
             {
                 extend: 'csvHtml5',
                 title: getTableName(),
-                class: 'primary'
+                className: 'btn btn-primary'
             },
             {
                 extend: 'excelHtml5',
-                title: getTableName()
+                title: getTableName(),
+                className: 'btn btn-primary'
             },
             {
                 extend: 'pdfHtml5',
-                title: getTableName()
+                title: getTableName(),
+                className: 'btn btn-primary'
             }
         ]
     })
 
     $('.export').append(table.buttons().container())
-    $('a.buttons-html5').attr('class', 'btn btn-primary')
 })
+
+
 
 socket.emit('halloVonClient')
 socket.on('halloVonServer', function (message) {
