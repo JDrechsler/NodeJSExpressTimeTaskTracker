@@ -137,3 +137,11 @@ function getTableName() {
     var res = rightNow.toISOString().slice(0, 10).replace(/TZ/g, "")
     return res
 }
+
+window.addEventListener("beforeunload", function (e) {
+    var confirmationMessage = 'It looks like you have been editing something. '
+        + 'If you leave before saving, your changes will be lost.';
+
+    (e || window.event).returnValue = confirmationMessage; //Gecko + IE
+    return confirmationMessage; //Gecko + Webkit, Safari, Chrome etc.
+});
