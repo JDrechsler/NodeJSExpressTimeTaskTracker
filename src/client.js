@@ -3,11 +3,10 @@ var socket = io()
 var vueVars = {
     table: '#table',
     status: 'working',
+    customTasks: [],
     newTask: '',
     foregroundApp: '',
-    dataSet: [
-
-    ]
+    dataSet: []
 }
 
 var vueMethods = {
@@ -17,6 +16,7 @@ var vueMethods = {
             return
         }
         vueVars.dataSet.push([vueVars.newTask, 0, 0, 0])
+        vueVars.customTasks.push(vueVars.newTask)
         vueVars.newTask = ''
     }
 }

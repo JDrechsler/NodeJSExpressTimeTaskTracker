@@ -27,10 +27,21 @@
 
         <div class="form-group">
             <form v-on:submit.prevent>
-                <label for="email">New Task:</label>
+                <label for="email">New custom task:</label>
                 <input class="form-control" type="text" v-model="newTask" id="task" name="task">
                 <button class="btn btn-primary" @click="addNewTask" style="display: none;">Add</button>
             </form>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <ul class="list-group">
+                    <li class="list-group-item" v-for="customTask in customTasks">
+                        {{customTask}}
+                        <button class="btn btn-success btn-xs pull-right">Custom</button>
+                    </li>
+                </ul>
+            </div>
         </div>
 
         <div class="row">&nbsp;</div>
